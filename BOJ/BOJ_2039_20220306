@@ -1,0 +1,43 @@
+#브루트포스 알고리즘
+#일곱 난쟁이
+
+```
+#include <iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+int main() {
+	vector<int> vec;
+	int num;
+	int sum = 0;
+	int index = 0;
+	for (int i = 0; i < 9; i++) {//9명의 난쟁이 키 입력 받고 합을 sum에 저장한다.
+		cin >> num;
+		vec.push_back(num);
+		sum += vec[i];
+	}
+
+	for (int j = 0; j < 9 - 1; j++) {//2명을 찾아야 하므로 이중 for문으로 모든 경우의 수를 확인한다.
+		for (int k = j + 1; k < 9; k++) {
+			if (sum - (vec[j] + vec[k]) == 100) {//vec[j]와 vec[k]를 sum에서 뺏을 때 합이 100일 경우 출력후 종료.
+				vec[j] = -1;
+				vec[k] = -1;
+				sort(vec.begin(), vec.end());
+
+				for (int l = 2; l < 9; l++) {
+					cout << vec[l] << endl;
+				}
+				return 0;
+			}
+		}
+	}
+
+
+
+
+	return 0;
+}
+
+```
