@@ -46,7 +46,7 @@ static void postOrder(node* start)
 
 
 ### -Level order traversal: 
-맨 위 레벨부터 아래 레벨까지 왼쪽 노드에서 오른쪽 노드
+맨 위 레벨부터 아래 레벨까지 왼쪽 노드에서 오른쪽 노드<br>
 org_tree 구조체 안에 구현
 
 ```C++
@@ -78,8 +78,8 @@ static void levelOrder(node* start)
 ```
 
 ### BST(Binary Search Tree)
-부모 노드의 값 >= 왼쪽 자식 노드의 값
-부모 노드의 값 <= 오른쪽 자식 노드의 값
+부모 노드의 값 >= 왼쪽 자식 노드의 값<br>
+부모 노드의 값 <= 오른쪽 자식 노드의 값<br>
 (왼쪽 노드 <= 부모 노드 <= 오른쪽 노드)
 
 
