@@ -12,8 +12,11 @@ static void preOrder(node* start)
 	preOrder(start->first);
 	preOrder(start->second);
 }
--In-order traversal :
+```
+### -In-order traversal :
 왼쪽 노드 -> 현재 노드 -> 오른쪽 노드
+
+```C++
 static void inOrder(node* start)
 {
 	if (!start)
@@ -24,9 +27,10 @@ static void inOrder(node* start)
 	inOrder(start->second);
 
 }
-
--Post-order traversal:
+```
+### -Post-order traversal:
 두 자식 노드 -> 현재노드
+```C++
 static void postOrder(node* start)
 {
 	if (!start)
