@@ -1,0 +1,30 @@
+#include<iostream>
+#include<math.h>
+#include<queue>
+using namespace std;
+
+int M,N;
+int main() {
+	int num = 0;
+	int i = 0;
+	int sum = 0;
+	queue<int> firstSearch;
+
+	cin >> M >> N;
+	do {
+		if (num >= M) {
+			sum += num;
+			firstSearch.push(num);
+		}
+		num = num + 2 * i + 1;
+		i++;
+	} while (num <= N);
+	if (!firstSearch.front())
+		cout << -1;
+	else {
+		cout << sum<< endl;
+		cout << firstSearch.front();
+	}
+
+	return 0;
+}
